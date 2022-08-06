@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ketan - Verma</title>
+		<link rel="stylesheet" href="./home.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+		<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+		<script defer src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+		<script defer src="./text-sphere.js"></script>
+		<script defer>
+			window.addEventListener('load', event => {
+				const cards = document.querySelectorAll('.watchSec');
+				cards.forEach(card => addInterSectionObserver(card));
+			});
+			const addInterSectionObserver = element => {
+				var observer = new IntersectionObserver(
+					function (entries) {
+						if (entries[0].isIntersecting === true) {
+							var cover = document.createElement('div');
+							cover.classList.add('cover');
+							const sectionTitleWrapper = element.querySelector('.sectionTitleWrapper');
+							sectionTitleWrapper.appendChild(cover);
+							sectionTitleWrapper.classList.add('cardEntered');
+							if (element.classList.contains('skillsSection')) {
+								element.querySelector('.skills').classList.add('entered');
+							}
+							if (element.classList.contains('aboutUsSection')) {
+								element.querySelector('.desc').classList.add('entered');
+							}
+						}
+					},
+					{ threshold: [0.01] }
+				);
+				observer.observe(element);
+			};
+		</script>
+	</head>
+	<body>
+		<!-- <input type="checkbox" id="shadows" checked /><label for="shadows">Soft shadows</label> -->
+		<section class="heroSection">
+			<div class="outerContent">
+				<div class="content">
+					<h1 class="line1">
+						<span class="before">&lt;h1&gt;</span>
+						<span class="word word1">
+							<span class="letter">H</span>
+							<span class="letter">i</span>
+							<span class="letter">,</span>
+						</span>
+						<div class="cover">!</div>
+					</h1>
+					<h1 class="line2">
+						<span class="word word2">
+							<span class="letter">I</span>
+							<span class="letter">'</span>
+							<span class="letter">m</span>
+						</span>
+						&nbsp; &nbsp; &nbsp;
+						<span class="word word3">
+							<span class="wrapper"> <span class="normal">K</span><span class="highlight">K</span> </span>
+							<span class="letter">e</span>
+							<span class="letter">t</span>
+							<span class="letter">a</span>
+							<span class="letter">n</span>
+						</span>
+						<div class="cover">!</div>
+					</h1>
+					<h1 class="line3">
+						<span class="word word4">
+							<span class="letter">W</span>
+							<span class="letter">e</span>
+							<span class="letter">b</span>
+						</span>
+						&nbsp; &nbsp; &nbsp;
+						<span class="word word5">
+							<span class="letter">D</span>
+							<span class="letter">e</span>
+							<span class="letter">v</span>
+							<span class="letter">e</span>
+							<span class="letter">l</span>
+							<span class="letter">o</span>
+							<span class="letter">p</span>
+							<span class="letter">e</span>
+							<span class="letter">r</span>
+						</span>
+						<span class="after">&lt;/h1&gt;</span>
+						<div class="cover">!</div>
+					</h1>
+					<p>
+						<span class="letter">F</span>
+						<span class="letter">u</span>
+						<span class="letter">l</span>
+						<span class="letter">l</span>
+						&nbsp;&nbsp;
+						<span class="letter">S</span>
+						<span class="letter">t</span>
+						<span class="letter">a</span>
+						<span class="letter">c</span>
+						<span class="letter">k</span>
+						&nbsp;&nbsp;
+						<span class="letter">D</span>
+						<span class="letter">e</span>
+						<span class="letter">v</span>
+						<span class="letter">e</span>
+						<span class="letter">l</span>
+						<span class="letter">o</span>
+						<span class="letter">p</span>
+						<span class="letter">e</span>
+						<span class="letter">r</span>
+						<span class="cover">!</span>
+					</p>
+					<a class="action_btn">Contact Me</a>
+				</div>
+			</div>
+			<div class="cubesContainer">
+				<div class="cubes">
+					<!--   row, column, z -->
+					<div class="cube" data-cube="111">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-z" data-cube="112"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="121">
+						<div class="cube-wrap">
+							<div class="cube-top"></div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="131">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-z" data-cube="132"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="211">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="111"></div>
+								<div class="shadow-y" data-cube="111"></div>
+								<div class="shadow-z" data-cube="212"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="221">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="121"></div>
+								<div class="shadow-y" data-cube="121"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="231">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="131"></div>
+								<div class="shadow-y" data-cube="131"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="311">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="211"></div>
+								<div class="shadow-y" data-cube="211"></div>
+								<div class="shadow-z" data-cube="312"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="321">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="221"></div>
+								<div class="shadow-y" data-cube="221"></div>
+								<div class="shadow-z" data-cube="322"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="331">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="231"></div>
+								<div class="shadow-y" data-cube="231"></div>
+								<div class="shadow-z" data-cube="332"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+
+					<!-- top layer -->
+					<div class="cube" data-cube="112">
+						<div class="cube-wrap">
+							<div class="cube-top"></div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="122">
+						<div class="cube-wrap">
+							<div class="cube-top"></div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="132">
+						<div class="cube-wrap">
+							<div class="cube-top"></div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="212">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="112"></div>
+								<div class="shadow-y" data-cube="112"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="222">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="122"></div>
+								<div class="shadow-y" data-cube="122"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="232">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="132"></div>
+								<div class="shadow-y" data-cube="132"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="312">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="212"></div>
+								<div class="shadow-y" data-cube="212"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="322">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="222"></div>
+								<div class="shadow-y" data-cube="222"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="332">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="232"></div>
+								<div class="shadow-y" data-cube="232"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+
+					<!-- bottom layer -->
+					<div class="cube" data-cube="113">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-z" data-cube="111"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="123">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-z" data-cube="121"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="133">
+						<div class="cube-wrap">
+							<div class="cube-top"></div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="213">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="113"></div>
+								<div class="shadow-y" data-cube="113"></div>
+								<div class="shadow-z" data-cube="211"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="223">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-y" data-cube="123"></div>
+								<div class="shadow-z" data-cube="221"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="233">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-y" data-cube="133"></div>
+								<div class="shadow-z" data-cube="231"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="313">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="213"></div>
+								<div class="shadow-y" data-cube="213"></div>
+								<div class="shadow-z" data-cube="311"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="323">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="223"></div>
+								<div class="shadow-y" data-cube="223"></div>
+								<div class="shadow-z" data-cube="321"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+					<div class="cube" data-cube="333">
+						<div class="cube-wrap">
+							<div class="cube-top">
+								<div class="shadow-flip" data-cube="233"></div>
+								<div class="shadow-y" data-cube="233"></div>
+								<div class="shadow-z" data-cube="331"></div>
+							</div>
+							<div class="cube-bottom"></div>
+							<div class="cube-front-left"></div>
+							<div class="cube-front-right"></div>
+							<div class="cube-back-left"></div>
+							<div class="cube-back-right"></div>
+						</div>
+					</div>
+
+					<div class="large-shadows">
+						<div class="large-shadow" data-cube="113"></div>
+						<div class="large-shadow" data-cube="123"></div>
+						<div class="large-shadow" data-cube="133"></div>
+						<div class="large-shadow" data-cube="213"></div>
+						<div class="large-shadow" data-cube="223"></div>
+						<div class="large-shadow" data-cube="233"></div>
+						<div class="large-shadow" data-cube="313"></div>
+						<div class="large-shadow" data-cube="323"></div>
+						<div class="large-shadow" data-cube="333"></div>
+					</div>
+				</div>
+			</div>
+			<p class="scrollDownIcon scrollDownIconLeft">
+				<span> Scroll Down </span>
+				<i class="bx bx-chevrons-down"></i>
+			</p>
+			<p class="scrollDownIcon scrollDownIconRight">
+				<span> Scroll Down </span>
+				<i class="bx bx-chevrons-down"></i>
+			</p>
+		</section>
+		<section class="aboutUsSection watchSec">
+			<div class="sectionTitleWrapper">
+				<h2 class="sectionTitle">Me, Myself and I</h2>
+				<!-- <div class="cover"></div> -->
+			</div>
+			<div class="content">
+				<div class="desc">
+					<p>
+						I got introduced to programming by a small game organised by my high school Computer Science
+						teacher and have been completely hooked to it ever since.
+					</p>
+					<p>
+						I have been developing and creating website for the past 5 years and have worked with multiple
+						startups helping create innovative and captivating user experiences as a full stack developer.
+					</p>
+					<p>
+						Working for companies and individuals around the globe I met and learnt from amazing and
+						ambitious people, and look forward to meeting new people and growing.
+					</p>
+				</div>
+				<div class="text-sphere"></div>
+			</div>
+		</section>
+		<section class="skillsSection watchSec">
+			<div class="sectionTitleWrapper">
+				<h2 class="sectionTitle">My Skills</h2>
+				<!-- <div class="cover"></div> -->
+			</div>
+			<div class="skills">
+				<div class="skill">
+					<i class="bx bxl-react"></i>
+					<div>
+						<h3 class="sub-title">React JS</h3>
+						<p>(3 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner1"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bxl-nodejs"></i>
+					<div>
+						<h3 class="sub-title">Node JS</h3>
+						<p>(2 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner2"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bxl-php"></i>
+					<div>
+						<h3 class="sub-title">PHP</h3>
+						<p>(1 year)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner7"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bxl-html5"></i>
+					<div>
+						<h3 class="sub-title">HTML</h3>
+						<p>(5 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner3"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bxl-css3"></i>
+					<div>
+						<h3 class="sub-title">CSS</h3>
+						<p>(5 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner4"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bxl-javascript"></i>
+					<div>
+						<h3 class="sub-title">Javascript</h3>
+						<p>(4 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner5"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bx-data"></i>
+					<div>
+						<h3 class="sub-title">MongoDB</h3>
+						<p>(2 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner6"></div></div>
+				</div>
+				<div class="skill">
+					<i class="bx bx-data"></i>
+					<div>
+						<h3 class="sub-title">MySQL</h3>
+						<p>(2 years)</p>
+					</div>
+					<div class="progressOuter"><div class="inner inner6"></div></div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

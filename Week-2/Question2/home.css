@@ -1,0 +1,2198 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@900&display=swap");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #010101;
+}
+
+.action_btn {
+  border: none;
+  background-color: #010101;
+  position: relative;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #21ebff;
+}
+
+.action_btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+}
+
+.action_btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 10px;
+  border-right: 2px solid #21ebff;
+  border-bottom: 2px solid #21ebff;
+}
+
+.action_btn:hover {
+  background-color: #21ebff;
+  -webkit-box-shadow: 0 0 20px #21ebff;
+          box-shadow: 0 0 20px #21ebff;
+  color: #111;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.action_btn:hover::before, .action_btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0, 1) !important;
+          animation-timing-function: cubic-bezier(0.5, 0, 0, 1) !important;
+}
+
+.sectionTitleWrapper {
+  position: relative;
+}
+
+.sectionTitleWrapper .sectionTitle {
+  font-size: 56px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  padding-left: 1rem;
+  text-align: start;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0;
+}
+
+.sectionTitleWrapper .sectionTitle::before {
+  content: '<h1>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  top: -1rem;
+  font-weight: 400;
+  font-size: 24px;
+  z-index: 20;
+  color: #585858;
+  left: 0;
+}
+
+.sectionTitleWrapper .sectionTitle::after {
+  z-index: 20;
+  font-size: 24px;
+  content: '</h1>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  bottom: -1rem;
+  font-weight: 400;
+  color: #585858;
+  left: 0;
+}
+
+.sectionTitleWrapper .cover {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 84px;
+  width: 100%;
+  height: 100%;
+  font-weight: 100;
+  color: rgba(61, 147, 169, 0);
+  background: #010101;
+  -webkit-animation: typing 3s steps(10) forwards;
+          animation: typing 3s steps(10) forwards;
+}
+
+@-webkit-keyframes typing {
+  0% {
+    color: #c72b2b;
+    width: 100%;
+  }
+  100% {
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  0% {
+    color: #c72b2b;
+    width: 100%;
+  }
+  100% {
+  }
+  to {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+
+.sectionTitleWrapper.cardEntered .sectionTitle {
+  opacity: 1;
+}
+
+.heroSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.heroSection .scrollDownIcon {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+.heroSection .scrollDownIcon span {
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 100px;
+  -webkit-animation: bounce-up 2s linear 0s infinite;
+          animation: bounce-up 2s linear 0s infinite;
+}
+
+@-webkit-keyframes bounce-up {
+  0% {
+    top: 0rem;
+  }
+  50% {
+    top: 1rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes bounce-up {
+  0% {
+    top: 0rem;
+  }
+  50% {
+    top: 1rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+.heroSection .scrollDownIcon i {
+  margin-top: auto;
+  font-size: 24px;
+}
+
+.heroSection .scrollDownIconLeft {
+  left: 0;
+  right: unset;
+}
+
+.heroSection .scrollDownIconRight {
+  right: 0;
+  left: unset;
+}
+
+.heroSection .cubesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+  height: 50vh;
+  margin-top: 4rem;
+  width: 30%;
+}
+
+@media screen and (max-width: 960px) {
+  .heroSection .cubesContainer {
+    margin-top: 45rem;
+  }
+}
+
+.heroSection .cubesContainer:hover > label,
+.heroSection .cubesContainer:hover > input {
+  opacity: 1;
+}
+
+.heroSection .cubesContainer .cubes {
+  position: absolute;
+  top: 0;
+  left: 4rem;
+}
+
+.heroSection .cubesContainer label,
+.heroSection .cubesContainer #shadows {
+  position: fixed;
+  top: 2vmin;
+  opacity: 0.5;
+}
+
+.heroSection .cubesContainer label {
+  left: 6vmin;
+  color: white;
+  font-weight: bold;
+}
+
+.heroSection .cubesContainer #shadows {
+  left: 2vmin;
+}
+
+.heroSection .cubesContainer #shadows:not(:checked) ~ .cubes {
+  --shadow-filter: none;
+}
+
+.heroSection .cubesContainer .cubes {
+  width: 10vmin;
+  height: 10vmin;
+  -webkit-transform: rotateX(60deg) rotateZ(-45deg);
+          transform: rotateX(60deg) rotateZ(-45deg);
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  overflow: visible;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 9000px;
+          perspective: 9000px;
+}
+
+.heroSection .cubesContainer .cube,
+.heroSection .cubesContainer .large-shadow {
+  height: 10vmin;
+  width: 10vmin;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  -webkit-transform-origin: center center -0.5vmin;
+          transform-origin: center center -0.5vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heroSection .cubesContainer .cube > .cube-wrap,
+.heroSection .cubesContainer .large-shadow > .cube-wrap {
+  -webkit-animation: cube 4s infinite both;
+          animation: cube 4s infinite both;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  -webkit-transform-origin: center center -0.5vmin;
+          transform-origin: center center -0.5vmin;
+  will-change: transform;
+}
+
+@-webkit-keyframes cube {
+  from,
+  to,
+  20%,
+  60% {
+    -webkit-animation-timing-function: step-start;
+            animation-timing-function: step-start;
+    -webkit-transform: none;
+            transform: none;
+  }
+  40% {
+    -webkit-transform: rotateY(-1turn);
+            transform: rotateY(-1turn);
+  }
+}
+
+@keyframes cube {
+  from,
+  to,
+  20%,
+  60% {
+    -webkit-animation-timing-function: step-start;
+            animation-timing-function: step-start;
+    -webkit-transform: none;
+            transform: none;
+  }
+  40% {
+    -webkit-transform: rotateY(-1turn);
+            transform: rotateY(-1turn);
+  }
+}
+
+.heroSection .cubesContainer .cube[data-cube^='1'],
+.heroSection .cubesContainer .large-shadow[data-cube^='1'] {
+  top: calc(-10vmin - 2px);
+  --color-bg-top: #a0ebe8;
+  --color-bg-bottom: #89e4e4;
+  --color-fl-top: #4eafbc;
+  --color-fl-bottom: #43a5b2;
+}
+
+.heroSection .cubesContainer .cube[data-cube^='2'],
+.heroSection .cubesContainer .large-shadow[data-cube^='2'] {
+  --color-bg-top: #89e4e4;
+  --color-bg-bottom: #76dee5;
+  --color-fl-top: #43a5b2;
+  --color-fl-bottom: #3d93a9;
+}
+
+.heroSection .cubesContainer .cube[data-cube^='3'],
+.heroSection .cubesContainer .large-shadow[data-cube^='3'] {
+  top: calc(10vmin + 2px);
+  --color-bg-top: #76dee5;
+  --color-bg-bottom: #63d3d4;
+  --color-fl-top: #3d93a9;
+  --color-fl-bottom: #3b8d9f;
+}
+
+.heroSection .cubesContainer .cube[data-cube^='11'], .heroSection .cubesContainer .cube[data-cube^='21'], .heroSection .cubesContainer .cube[data-cube^='31'],
+.heroSection .cubesContainer .large-shadow[data-cube^='11'],
+.heroSection .cubesContainer .large-shadow[data-cube^='21'],
+.heroSection .cubesContainer .large-shadow[data-cube^='31'] {
+  left: calc(-10vmin - 2px);
+  --color-fr-top: #2d505f;
+  --color-fr-bottom: #2d4f63;
+}
+
+.heroSection .cubesContainer .cube[data-cube^='12'], .heroSection .cubesContainer .cube[data-cube^='22'], .heroSection .cubesContainer .cube[data-cube^='32'],
+.heroSection .cubesContainer .large-shadow[data-cube^='12'],
+.heroSection .cubesContainer .large-shadow[data-cube^='22'],
+.heroSection .cubesContainer .large-shadow[data-cube^='32'] {
+  --color-fr-top: #2d4f63;
+  --color-fr-bottom: #2a5262;
+}
+
+.heroSection .cubesContainer .cube[data-cube^='13'], .heroSection .cubesContainer .cube[data-cube^='23'], .heroSection .cubesContainer .cube[data-cube^='33'],
+.heroSection .cubesContainer .large-shadow[data-cube^='13'],
+.heroSection .cubesContainer .large-shadow[data-cube^='23'],
+.heroSection .cubesContainer .large-shadow[data-cube^='33'] {
+  left: calc(10vmin + 2px);
+  --color-fr-top: #2a5262;
+  --color-fr-bottom: #2a5467;
+}
+
+.heroSection .cubesContainer .cube[data-cube$='2'],
+.heroSection .cubesContainer .large-shadow[data-cube$='2'] {
+  -webkit-transform: translateZ(calc(10vmin + 2px));
+          transform: translateZ(calc(10vmin + 2px));
+}
+
+.heroSection .cubesContainer .cube[data-cube$='3'],
+.heroSection .cubesContainer .large-shadow[data-cube$='3'] {
+  -webkit-transform: translateZ(calc(-10vmin - 2px));
+          transform: translateZ(calc(-10vmin - 2px));
+}
+
+.heroSection .cubesContainer .large-shadows {
+  -webkit-transform: translateZ(-21vmin);
+          transform: translateZ(-21vmin);
+}
+
+.heroSection .cubesContainer .large-shadow {
+  background: rgba(245, 245, 245, 0.2);
+  height: 10vmin;
+  width: 10vmin;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-animation: large-shadow 4s infinite both;
+          animation: large-shadow 4s infinite both;
+  -webkit-filter: var(--shadow-filter, blur(3vmin));
+          filter: var(--shadow-filter, blur(3vmin));
+  opacity: 0.2;
+  will-change: transform;
+}
+
+@-webkit-keyframes large-shadow {
+  from,
+  80%,
+  to {
+    -webkit-transform: scale(1.5, 3);
+            transform: scale(1.5, 3);
+  }
+  20% {
+    -webkit-transform: scale(1.5, 2);
+            transform: scale(1.5, 2);
+  }
+  40%,
+  60% {
+    -webkit-transform: scale(1.5, 5);
+            transform: scale(1.5, 5);
+  }
+  50% {
+    -webkit-transform: scale(1, 5);
+            transform: scale(1, 5);
+  }
+}
+
+@keyframes large-shadow {
+  from,
+  80%,
+  to {
+    -webkit-transform: scale(1.5, 3);
+            transform: scale(1.5, 3);
+  }
+  20% {
+    -webkit-transform: scale(1.5, 2);
+            transform: scale(1.5, 2);
+  }
+  40%,
+  60% {
+    -webkit-transform: scale(1.5, 5);
+            transform: scale(1.5, 5);
+  }
+  50% {
+    -webkit-transform: scale(1, 5);
+            transform: scale(1, 5);
+  }
+}
+
+.heroSection .cubesContainer [class^='cube-'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  top: 0;
+  left: 0;
+}
+
+.heroSection .cubesContainer [class^='cube-'], .heroSection .cubesContainer [class^='cube-']:before {
+  will-change: transform;
+  -webkit-animation: any 4s infinite both;
+          animation: any 4s infinite both;
+}
+
+.heroSection .cubesContainer [class^='cube-']:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.heroSection .cubesContainer .cube-top {
+  -webkit-animation-name: cube-top;
+          animation-name: cube-top;
+  overflow: hidden;
+}
+
+.heroSection .cubesContainer .cube-top:before, .heroSection .cubesContainer .cube-top:after {
+  will-change: transform;
+}
+
+.heroSection .cubesContainer .cube-top:before {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cbfeff), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-top)), to(var(--color-bg-bottom)));
+  background-image: linear-gradient(to bottom, #cbfeff, transparent), linear-gradient(to bottom, var(--color-bg-top), var(--color-bg-bottom));
+  background-size: 2px 100%, auto;
+  background-repeat: no-repeat;
+}
+
+.heroSection .cubesContainer .cube-top:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dff4f0;
+  -webkit-animation: cube-top-flash 4s infinite both;
+          animation: cube-top-flash 4s infinite both;
+}
+
+@-webkit-keyframes cube-top-flash {
+  from,
+  50%,
+  60%,
+  to {
+    opacity: 0;
+  }
+  52% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes cube-top-flash {
+  from,
+  50%,
+  60%,
+  to {
+    opacity: 0;
+  }
+  52% {
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes cube-top {
+  20% {
+    -webkit-transform: translateZ(calc(-10vmin + 2vmin));
+            transform: translateZ(calc(-10vmin + 2vmin));
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes cube-top {
+  20% {
+    -webkit-transform: translateZ(calc(-10vmin + 2vmin));
+            transform: translateZ(calc(-10vmin + 2vmin));
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.heroSection .cubesContainer .cube-front-left {
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  overflow: hidden;
+}
+
+.heroSection .cubesContainer .cube-front-left:before {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-fl-top)), to(var(--color-fl-bottom))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), color-stop(60%, transparent));
+  background-image: linear-gradient(to bottom, var(--color-fl-top), var(--color-fl-bottom)), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent 60%);
+  background-size: auto auto 1px 100%;
+  background-repeat: no-repeat;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation-name: cube-front-left;
+          animation-name: cube-front-left;
+  will-change: transform;
+}
+
+@-webkit-keyframes cube-front-left {
+  20% {
+    -webkit-transform: scaleX(0.2);
+            transform: scaleX(0.2);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateX(-8vmin) scaleX(0.2);
+            transform: translateX(-8vmin) scaleX(0.2);
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes cube-front-left {
+  20% {
+    -webkit-transform: scaleX(0.2);
+            transform: scaleX(0.2);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateX(-8vmin) scaleX(0.2);
+            transform: translateX(-8vmin) scaleX(0.2);
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.heroSection .cubesContainer .cube-front-right {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+.heroSection .cubesContainer .cube-front-right:before {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-fr-top)), to(var(--color-fr-bottom)));
+  background-image: linear-gradient(to right, var(--color-fr-top), var(--color-fr-bottom));
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-name: cube-front-right;
+          animation-name: cube-front-right;
+  will-change: transform;
+}
+
+@-webkit-keyframes cube-front-right {
+  20% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateY(8vmin) scaleY(0.2);
+            transform: translateY(8vmin) scaleY(0.2);
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes cube-front-right {
+  20% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateY(8vmin) scaleY(0.2);
+            transform: translateY(8vmin) scaleY(0.2);
+  }
+  80% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.heroSection .cubesContainer .cube-bottom {
+  -webkit-transform: translateZ(-10vmin);
+          transform: translateZ(-10vmin);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-top)), to(var(--color-bg-bottom)));
+  background-image: linear-gradient(to bottom, var(--color-bg-top), var(--color-bg-bottom));
+  -webkit-animation-name: cube-bottom;
+          animation-name: cube-bottom;
+}
+
+@-webkit-keyframes cube-bottom {
+  from,
+  20%,
+  80%,
+  to {
+    -webkit-transform: translateZ(calc(-10vmin + 1px)) scale(0.95);
+            transform: translateZ(calc(-10vmin + 1px)) scale(0.95);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateZ(-2vmin) scale(0.95);
+            transform: translateZ(-2vmin) scale(0.95);
+  }
+}
+
+@keyframes cube-bottom {
+  from,
+  20%,
+  80%,
+  to {
+    -webkit-transform: translateZ(calc(-10vmin + 1px)) scale(0.95);
+            transform: translateZ(calc(-10vmin + 1px)) scale(0.95);
+  }
+  40%,
+  60% {
+    -webkit-transform: translateZ(-2vmin) scale(0.95);
+            transform: translateZ(-2vmin) scale(0.95);
+  }
+}
+
+.heroSection .cubesContainer .cube-bottom:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dff4f0;
+  -webkit-animation: cube-bottom-flash 4s infinite both;
+          animation: cube-bottom-flash 4s infinite both;
+  will-change: transform;
+}
+
+@-webkit-keyframes cube-bottom-flash {
+  from,
+  40%,
+  50%,
+  to {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes cube-bottom-flash {
+  from,
+  40%,
+  50%,
+  to {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.9;
+  }
+}
+
+.heroSection .cubesContainer [class^='shadow'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-filter: var(--shadow-filter, blur(20px));
+          filter: var(--shadow-filter, blur(20px));
+}
+
+.heroSection .cubesContainer [class^='shadow'], .heroSection .cubesContainer [class^='shadow']:before {
+  will-change: transform;
+}
+
+.heroSection .cubesContainer [class^='shadow']:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #214354;
+  opacity: 0.7;
+}
+
+.heroSection .cubesContainer .shadow-y {
+  -webkit-animation: shadow-y 4s infinite both;
+          animation: shadow-y 4s infinite both;
+}
+
+.heroSection .cubesContainer .shadow-y[data-cube^='11'], .heroSection .cubesContainer .shadow-y[data-cube^='21'] {
+  left: 10%;
+}
+
+.heroSection .cubesContainer .shadow-y[data-cube^='13'], .heroSection .cubesContainer .shadow-y[data-cube^='23'] {
+  left: -10%;
+}
+
+@-webkit-keyframes shadow-y {
+  to,
+  40%,
+  60%,
+  80%,
+  from {
+    -webkit-transform: translateY(-100%) scale(2, 0.75);
+            transform: translateY(-100%) scale(2, 0.75);
+  }
+  20% {
+    -webkit-transform: scale(2, 1);
+            transform: scale(2, 1);
+  }
+}
+
+@keyframes shadow-y {
+  to,
+  40%,
+  60%,
+  80%,
+  from {
+    -webkit-transform: translateY(-100%) scale(2, 0.75);
+            transform: translateY(-100%) scale(2, 0.75);
+  }
+  20% {
+    -webkit-transform: scale(2, 1);
+            transform: scale(2, 1);
+  }
+}
+
+.heroSection .cubesContainer .shadow-y:before {
+  -webkit-animation: shadow-y-inverse 4s infinite both;
+          animation: shadow-y-inverse 4s infinite both;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+@-webkit-keyframes shadow-y-inverse {
+  to,
+  40%,
+  60%,
+  80%,
+  from {
+    opacity: 0.9;
+    -webkit-transform: scale(2, 1);
+            transform: scale(2, 1);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%) scale(2, 0.75);
+            transform: translateY(-100%) scale(2, 0.75);
+  }
+}
+
+@keyframes shadow-y-inverse {
+  to,
+  40%,
+  60%,
+  80%,
+  from {
+    opacity: 0.9;
+    -webkit-transform: scale(2, 1);
+            transform: scale(2, 1);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%) scale(2, 0.75);
+            transform: translateY(-100%) scale(2, 0.75);
+  }
+}
+
+.heroSection .cubesContainer .shadow-flip {
+  width: 2vmin;
+  height: 50%;
+  top: -1vmin;
+  left: calc(50% - 1vmin);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-filter: var(--shadow-filter, blur(1vmin));
+          filter: var(--shadow-filter, blur(1vmin));
+  -webkit-animation: shadow-flip 4s infinite both;
+          animation: shadow-flip 4s infinite both;
+  overflow: visible;
+}
+
+@-webkit-keyframes shadow-flip {
+  from,
+  20%,
+  40%,
+  50%,
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  45% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes shadow-flip {
+  from,
+  20%,
+  40%,
+  50%,
+  to {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  45% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+.heroSection .cubesContainer .shadow-flip:before {
+  -webkit-animation: shadow-flip-inverse 4s infinite both;
+          animation: shadow-flip-inverse 4s infinite both;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  opacity: 0;
+}
+
+@-webkit-keyframes shadow-flip-inverse {
+  from,
+  20%,
+  40%,
+  50%,
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+  45% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes shadow-flip-inverse {
+  from,
+  20%,
+  40%,
+  50%,
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+  45% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    opacity: 0.6;
+  }
+}
+
+.heroSection .cubesContainer .shadow-z {
+  -webkit-animation: shadow-z 4s infinite both;
+          animation: shadow-z 4s infinite both;
+  overflow: visible;
+  will-change: transform;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.heroSection .cubesContainer .shadow-z[data-cube^='11'] {
+  --shadow-z-left: 50%;
+  --shadow-z-top: 50%;
+}
+
+.heroSection .cubesContainer .shadow-z[data-cube^='21'], .heroSection .cubesContainer .shadow-z[data-cube^='31'] {
+  --shadow-z-left: 50%;
+  --shadow-z-top: 0;
+}
+
+.heroSection .cubesContainer .shadow-z[data-cube^='32'] {
+  --shadow-z-left: 0;
+  --shadow-z-top: 0;
+  --shadow-x-scale: 2;
+}
+
+.heroSection .cubesContainer .shadow-z[data-cube^='33'] {
+  --shadow-z-left: -50%;
+  --shadow-z-top: 0;
+}
+
+@-webkit-keyframes shadow-z {
+  from,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-transform: scale(var(--shadow-x-scale), 2);
+            transform: scale(var(--shadow-x-scale), 2);
+  }
+  20% {
+    -webkit-transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(calc(var(--shadow-x-scale, 1) / 2), 2);
+            transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(calc(var(--shadow-x-scale, 1) / 2), 2);
+  }
+}
+
+@keyframes shadow-z {
+  from,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-transform: scale(var(--shadow-x-scale), 2);
+            transform: scale(var(--shadow-x-scale), 2);
+  }
+  20% {
+    -webkit-transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(calc(var(--shadow-x-scale, 1) / 2), 2);
+            transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(calc(var(--shadow-x-scale, 1) / 2), 2);
+  }
+}
+
+.heroSection .cubesContainer .shadow-z:before {
+  -webkit-animation: shadow-z-inverse 4s infinite both;
+          animation: shadow-z-inverse 4s infinite both;
+}
+
+@-webkit-keyframes shadow-z-inverse {
+  40%,
+  60% {
+    -webkit-transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(var(--shadow-x-scale, 1), 2);
+            transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(var(--shadow-x-scale, 1), 2);
+  }
+  45% {
+    opacity: 0;
+  }
+  from,
+  40%,
+  55% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+  from,
+  20%,
+  80%,
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes shadow-z-inverse {
+  40%,
+  60% {
+    -webkit-transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(var(--shadow-x-scale, 1), 2);
+            transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(var(--shadow-x-scale, 1), 2);
+  }
+  45% {
+    opacity: 0;
+  }
+  from,
+  40%,
+  55% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+  from,
+  20%,
+  80%,
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+.heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 221ms;
+          animation-delay: 221ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='111'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 221ms;
+          animation-delay: 221ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='111']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='111'] {
+  -webkit-animation-delay: 221ms;
+          animation-delay: 221ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 272ms;
+          animation-delay: 272ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='112'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 272ms;
+          animation-delay: 272ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='112']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='112'] {
+  -webkit-animation-delay: 272ms;
+          animation-delay: 272ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 135ms;
+          animation-delay: 135ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='113'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 135ms;
+          animation-delay: 135ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='113']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='113'] {
+  -webkit-animation-delay: 135ms;
+          animation-delay: 135ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 183ms;
+          animation-delay: 183ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='121'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 183ms;
+          animation-delay: 183ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='121']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='121'] {
+  -webkit-animation-delay: 183ms;
+          animation-delay: 183ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 158ms;
+          animation-delay: 158ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='122'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 158ms;
+          animation-delay: 158ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='122']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='122'] {
+  -webkit-animation-delay: 158ms;
+          animation-delay: 158ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 27ms;
+          animation-delay: 27ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='123'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 27ms;
+          animation-delay: 27ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='123']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='123'] {
+  -webkit-animation-delay: 27ms;
+          animation-delay: 27ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 189ms;
+          animation-delay: 189ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='131'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 189ms;
+          animation-delay: 189ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='131']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='131'] {
+  -webkit-animation-delay: 189ms;
+          animation-delay: 189ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 278ms;
+          animation-delay: 278ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='132'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 278ms;
+          animation-delay: 278ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='132']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='132'] {
+  -webkit-animation-delay: 278ms;
+          animation-delay: 278ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 126ms;
+          animation-delay: 126ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='133'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 126ms;
+          animation-delay: 126ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='133']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='133'] {
+  -webkit-animation-delay: 126ms;
+          animation-delay: 126ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 262ms;
+          animation-delay: 262ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='211'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 262ms;
+          animation-delay: 262ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='211']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='211'] {
+  -webkit-animation-delay: 262ms;
+          animation-delay: 262ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 138ms;
+          animation-delay: 138ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='212'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 138ms;
+          animation-delay: 138ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='212']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='212'] {
+  -webkit-animation-delay: 138ms;
+          animation-delay: 138ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='213'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='213']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='213'] {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 295ms;
+          animation-delay: 295ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='221'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 295ms;
+          animation-delay: 295ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='221']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='221'] {
+  -webkit-animation-delay: 295ms;
+          animation-delay: 295ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 26ms;
+          animation-delay: 26ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='222'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 26ms;
+          animation-delay: 26ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='222']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='222'] {
+  -webkit-animation-delay: 26ms;
+          animation-delay: 26ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 279ms;
+          animation-delay: 279ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='223'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 279ms;
+          animation-delay: 279ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='223']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='223'] {
+  -webkit-animation-delay: 279ms;
+          animation-delay: 279ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 184ms;
+          animation-delay: 184ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='231'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 184ms;
+          animation-delay: 184ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='231']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='231'] {
+  -webkit-animation-delay: 184ms;
+          animation-delay: 184ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 295ms;
+          animation-delay: 295ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='232'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 295ms;
+          animation-delay: 295ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='232']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='232'] {
+  -webkit-animation-delay: 295ms;
+          animation-delay: 295ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 129ms;
+          animation-delay: 129ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='233'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 129ms;
+          animation-delay: 129ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='233']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='233'] {
+  -webkit-animation-delay: 129ms;
+          animation-delay: 129ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 183ms;
+          animation-delay: 183ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='311'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 183ms;
+          animation-delay: 183ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='311']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='311'] {
+  -webkit-animation-delay: 183ms;
+          animation-delay: 183ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 136ms;
+          animation-delay: 136ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='312'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 136ms;
+          animation-delay: 136ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='312']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='312'] {
+  -webkit-animation-delay: 136ms;
+          animation-delay: 136ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 228ms;
+          animation-delay: 228ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='313'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 228ms;
+          animation-delay: 228ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='313']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='313'] {
+  -webkit-animation-delay: 228ms;
+          animation-delay: 228ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 131ms;
+          animation-delay: 131ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='321'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 131ms;
+          animation-delay: 131ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='321']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='321'] {
+  -webkit-animation-delay: 131ms;
+          animation-delay: 131ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 119ms;
+          animation-delay: 119ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='322'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 119ms;
+          animation-delay: 119ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='322']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='322'] {
+  -webkit-animation-delay: 119ms;
+          animation-delay: 119ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 225ms;
+          animation-delay: 225ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='323'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 225ms;
+          animation-delay: 225ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='323']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='323'] {
+  -webkit-animation-delay: 225ms;
+          animation-delay: 225ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 205ms;
+          animation-delay: 205ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='331'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 205ms;
+          animation-delay: 205ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='331']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='331'] {
+  -webkit-animation-delay: 205ms;
+          animation-delay: 205ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 98ms;
+          animation-delay: 98ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='332'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 98ms;
+          animation-delay: 98ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='332']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='332'] {
+  -webkit-animation-delay: 98ms;
+          animation-delay: 98ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap, .heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap:before, .heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap:after,
+.heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap > [class^='cube-'],
+.heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap > [class^='cube-']:before,
+.heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap > [class^='cube-']:after {
+  -webkit-animation-delay: 133ms;
+          animation-delay: 133ms;
+}
+
+.heroSection .cubesContainer .cube[data-cube='333'] > .cube-wrap [class^='shadow-'] {
+  -webkit-animation-delay: 133ms;
+          animation-delay: 133ms;
+}
+
+.heroSection .cubesContainer [class^='shadow-'][data-cube='333']:before,
+.heroSection .cubesContainer .large-shadow[data-cube='333'] {
+  -webkit-animation-delay: 133ms;
+          animation-delay: 133ms;
+}
+
+.heroSection .content {
+  width: 60%;
+  min-width: 950px;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.heroSection .content .wrapper {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.heroSection .content .wrapper span {
+  font-size: 84px;
+  font-weight: 900;
+}
+
+.heroSection .content .wrapper .highlight {
+  position: absolute;
+  left: -0.5rem;
+  color: #3d93a9;
+}
+
+.heroSection .content .cover {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 84px;
+  width: 100%;
+  height: 100%;
+  font-weight: 100;
+  color: rgba(61, 147, 169, 0);
+  background: #010101;
+  -webkit-animation: typing 3s steps(10) forwards;
+          animation: typing 3s steps(10) forwards;
+}
+
+@keyframes typing {
+  0% {
+    color: #c72b2b;
+    width: 100%;
+  }
+  100% {
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+}
+
+.heroSection .content h1 {
+  line-height: 1.3;
+  position: relative;
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heroSection .content h1 .word {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.heroSection .content h1 .word .letter {
+  font-size: 84px;
+  font-weight: 700;
+  -webkit-transition: color 0.5s steps(4, jump-both);
+  transition: color 0.5s steps(4, jump-both);
+}
+
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  .heroSection .content h1 .word .letter {
+    font-size: 64px;
+  }
+}
+
+.heroSection .content h1 .word .letter:hover {
+  color: #3d93a9;
+  -webkit-animation: bounce 800ms ease-out;
+          animation: bounce 800ms ease-out;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  1%,
+  21%,
+  41%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  11% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  31% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  1%,
+  21%,
+  41%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  11% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  31% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+.heroSection .content h1 .before {
+  content: '<h1>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  top: -1rem;
+  font-weight: 400;
+  z-index: 20;
+  color: #585858;
+  left: 0;
+}
+
+.heroSection .content h1 .after {
+  z-index: 20;
+  content: '</h1>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  bottom: -1rem;
+  font-weight: 400;
+  color: #585858;
+  left: 0;
+}
+
+.heroSection .content .line1 .cover {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.heroSection .content .line2 .cover {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.heroSection .content .line3 .cover {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.heroSection .content p {
+  margin: 3rem 0.5rem 5rem;
+  line-height: 1.5;
+  font-size: 56px;
+  padding-left: 1rem;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: -5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heroSection .content p .cover {
+  font-size: 56px;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  height: 100%;
+}
+
+.heroSection .content p .letter {
+  -webkit-transition: color 0.5s steps(4, jump-both);
+  transition: color 0.5s steps(4, jump-both);
+}
+
+.heroSection .content p .letter:hover {
+  color: #3d93a9;
+}
+
+.heroSection .content p::before {
+  content: '<p>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  top: -1rem;
+  font-weight: 400;
+  font-size: 24px;
+  color: #585858;
+  letter-spacing: 1px;
+  left: 0;
+  z-index: 20;
+}
+
+.heroSection .content p::after {
+  z-index: 20;
+  letter-spacing: 1px;
+  content: '</p>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  bottom: -1rem;
+  font-weight: 400;
+  font-size: 24px;
+  color: #585858;
+  left: 0;
+}
+
+.heroSection .outerContent {
+  position: relative;
+}
+
+@media screen and (max-width: 960px) {
+  .heroSection .outerContent .content {
+    position: absolute;
+    top: -36rem;
+    left: -21rem;
+    max-width: 100vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .heroSection .outerContent .cubesContainer {
+    margin-top: 52rem;
+  }
+}
+
+.aboutUsSection {
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 2rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.aboutUsSection .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.aboutUsSection .content .desc {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.aboutUsSection .content .desc p {
+  margin: 0.5rem auto;
+  color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  text-align: start;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+  opacity: 0;
+}
+
+.aboutUsSection .content .desc::before {
+  content: '<p>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  top: -1rem;
+  font-weight: 400;
+  font-size: 24px;
+  z-index: 20;
+  color: #585858;
+  left: 0;
+}
+
+.aboutUsSection .content .desc::after {
+  z-index: 20;
+  font-size: 24px;
+  content: '</p>';
+  position: absolute;
+  font-family: 'Permanent Marker', cursive;
+  bottom: -1rem;
+  font-weight: 400;
+  color: #585858;
+  left: 0;
+}
+
+.aboutUsSection .content .desc.entered p {
+  -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.aboutUsSection .content .desc.entered p:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.aboutUsSection .content .desc.entered p:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.aboutUsSection .content .desc.entered p:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aboutUsSection .content .text-sphere .tagcloud {
+  width: 100% !important;
+  height: 100% !important;
+  color: red;
+}
+
+.skillsSection {
+  height: 100vh;
+  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem 1rem;
+}
+
+.skillsSection .skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  width: 100%;
+  margin: auto;
+}
+
+.skillsSection .skills .skill {
+  width: 100%;
+  height: 250px;
+  -webkit-box-shadow: 0 0 10px #3d93a9;
+          box-shadow: 0 0 10px #3d93a9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  gap: 1.5rem;
+}
+
+.skillsSection .skills .skill i {
+  color: #3d93a9;
+  font-size: 56px;
+}
+
+.skillsSection .skills .skill h3,
+.skillsSection .skills .skill p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.skillsSection .skills .skill p {
+  font-size: 16px;
+  letter-spacing: 4px;
+  line-height: 1.4;
+}
+
+.skillsSection .skills .skill .progressOuter {
+  width: 90%;
+  height: 5px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  margin: 0 auto;
+  background: gray;
+  padding: 0;
+}
+
+.skillsSection .skills .skill .progressOuter .inner {
+  padding: 0;
+  height: 100%;
+  border-radius: 6px;
+  margin: 0;
+  width: 0%;
+  background-color: red;
+}
+
+.skillsSection .skills .skill .progressOuter .inner1 {
+  width: 80%;
+}
+
+.skillsSection .skills .skill .progressOuter .inner2 {
+  width: 60%;
+}
+
+.skillsSection .skills .skill .progressOuter .inner3 {
+  width: 100%;
+}
+
+.skillsSection .skills .skill .progressOuter .inner4 {
+  width: 90%;
+}
+
+.skillsSection .skills .skill .progressOuter .inner5 {
+  width: 80%;
+}
+
+.skillsSection .skills .skill .progressOuter .inner6 {
+  width: 60%;
+}
+
+.skillsSection .skills .skill .progressOuter .inner7 {
+  width: 60%;
+}
+
+.skillsSection .skills.entered .skill {
+  -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.skillsSection .skills.entered .skill:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(6) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(7) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.skillsSection .skills.entered .skill:nth-child(8) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=home.css.map */
